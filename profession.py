@@ -23,3 +23,14 @@ def choose(data):
 
 foo = parseCSV("occupations.csv")
 print(choose(foo));
+
+# Diagnostic Work Below - 100,000 Iteration Test
+'''
+diagnostics = dict();
+for key in parseCSV("occupations.csv"):
+    diagnostics[key] = 0
+for i in range(100000):
+    diagnostics[choose(foo)] += 1
+for each in diagnostics:
+    print (each + "\t:" + str(diagnostics[each]) + "\n")
+'''
